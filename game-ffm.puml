@@ -7,6 +7,7 @@ skinparam nodesep 1
 <style>
   .axis {
     FontColor: black;
+    FontSize: 30;
   }
 </style>
 
@@ -17,65 +18,45 @@ $empty_axes()
 $join_axes_3x3(hidden, hidden)
 @enduml
 
-@startmindmap axis-x-with-clarifications-ru
+@startuml axis-x-relation
 !include lib/game.puml!core
-!include lib/i18n.puml!ru
+!include lib/i18n.puml!en
+skinparam ranksep 20
+skinparam nodesep 20
+allowmixing
 
-<style>
-node {
-  MaximumWidth 1000
-  Padding 5
-  Margin 10
-}
-.term {
-  FontSize 30
-  LineColor DimGrey
-  LineThickness 0.5
-  BackgroundColor transparent
-}
-.defn {
-  FontSize 20
-  BackgroundColor transparent
-  LineColor transparent
-}
-</style>
+diamond relation
+note top: $translate(specification)
 
-+ $translate(xAxisNegativeTerm) <<term>>
-++ нечто умозрительное (только логическое пребывание) <<defn>>
+rectangle "$translate(xAxisNegativeTerm)" as left
+' note left: $translate(declaration)
+note left: $translate(abstract)
+rectangle "$translate(xAxisPositiveTerm)" as right
+' note right: $translate(detalization)
+note right: $translate(concrete)
 
-+ $translate(xAxisPositiveTerm) <<term>>
-++ нечто осязаемое (только физическое пребывание) <<defn>>
-@endmindmap
+left -- relation
+relation -- right
+@enduml
 
-@startmindmap axis-y-with-clarifications-ru
+@startuml axis-y-relation
 !include lib/game.puml!core
-!include lib/i18n.puml!ru
+!include lib/i18n.puml!en
+skinparam ranksep 20
+skinparam nodesep 20
+allowmixing
 
-<style>
-node {
-  MaximumWidth 1000
-  Padding 5
-  Margin 10
-}
-.term {
-  FontSize 30
-  LineColor DimGrey
-  LineThickness 0.5
-  BackgroundColor transparent
-}
-.defn {
-  FontSize 20
-  BackgroundColor transparent
-  LineColor transparent
-}
-</style>
+diamond relation
+note top: $translate(consequence)
 
-+ $translate(yAxisPositiveTerm) <<term>>
-++ нечто конструктивное (только структурное представление) <<defn>>
+rectangle "$translate(yAxisPositiveTerm)" as left
+note left: $translate(structure)
+rectangle "$translate(yAxisNegativeTerm)" as right
+note right: $translate(algorithm)
 
-+ $translate(yAxisNegativeTerm) <<term>>
-++ нечто функциональное (только операционное представление) <<defn>>
-@endmindmap
+left -- relation
+relation -- right
+@enduml
 
 @startuml matrix-with-axes
 !include lib/game.puml!core

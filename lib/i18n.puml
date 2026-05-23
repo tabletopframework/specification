@@ -54,9 +54,10 @@
     "many": "аватары"
   },
   "xAxisNegativeTerm": {
-    "one": "абстрактное"
+    ' "one": "абстрактное"
     ' "one": "абстракция"
     ' "one": "логическое"
+    "one": "декларация"
   },
   "xAxisPositiveTerm": {
     ' "one": "физическое"
@@ -64,7 +65,8 @@
     ' "one": "реальное"
     ' "one": "осязаемое"
     ' "one": "материальное"
-    "one": "конкретное"
+    ' "one": "конкретное"
+    "one": "детализация"
   },
   "yAxisNegativeTerm": {
     "one": "поведение"
@@ -74,16 +76,53 @@
     ' "one": "структура"
   },
   "xAxisNegativeLabel": {
+    ' "one": "а б с т р а к ц и я"
     "one": "а б с т р а к т н о е"
+    ' "one": "а б с т р а к т н о с т ь"
+    ' "one": "с п е ц и ф и к а ц и я"
   },
   "xAxisPositiveLabel": {
+    ' "one": "к о н к р е ц и я"
     "one": "к о н к р е т н о е"
+    ' "one": "к о н к р е т н о с т ь"
+    ' "one": "р е а л и з а ц и я"
+    ' "one": "и м п л е м е н т а ц и я"
   },
   "yAxisNegativeLabel": {
     "one": "п\nо\nв\nе\nд\nе\nн\nи\nе"
   },
   "yAxisPositiveLabel": {
     "one": "с\nо\nс\nт\nо\nя\nн\nи\nе"
+  },
+  "declaration": {
+    "one": "объявление"
+  },
+  "translation": {
+    "one": "трансляция"
+  },
+  "realization": {
+    "one": "реализация"
+  },
+  "specification": {
+    "one": "спецификация"
+  },
+  "detalization": {
+    "one": "детализация"
+  },
+  "definition": {
+    "one": "определение"
+  },
+  "entailment": {
+    "one": "следствие"
+  },
+  "consequence": {
+    "one": "следствие"
+  },
+  "structure": {
+    "one": "структура"
+  },
+  "algorithm": {
+    "one": "алгоритм"
   },
   "plot": {
     "one": "сюжет",
@@ -367,10 +406,12 @@
     "one": "runtime"
   },
   "xAxisNegativeTerm": {
-    "one": "abstract"
+    ' "one": "abstract"
+    "one": "declaration"
   },
   "xAxisPositiveTerm": {
-    "one": "concrete"
+    ' "one": "concrete"
+    "one": "detalization"
   },
   "yAxisNegativeTerm": {
     "one": "behavior"
@@ -381,23 +422,65 @@
   "xAxisNegativeLabel": {
     ' "one": "l o g i c a l"
     ' "one": "m e n t a l"
-    "one": "a b s t r a c t"
+    ' "one": "a b s t r a c t"
     ' "one": "a b s t r a c t i o n"
-    ' "one": "s p e c i f i c a t i o n"
+    ' "one": "a b s t r a c t n e s s"
+    "one": "d e c l a r a t i o n"
   },
   "xAxisPositiveLabel": {
     ' "one": "p h y s i c a l"
     ' "one": "m a t e r i a l"
-    "one": "c o n c r e t e"
-    ' "one": "r e a l i z a t i o n"
+    ' "one": "c o n c r e t e"
+    ' "one": "c o n c r e t i o n"
+    ' "one": "c o n c r e t e n e s s"
+    ' "one": "s p e c i f i c a t i o n"
+    ' "one": "i m p l e m e n t a t i o n"
     ' "one": "r    e    a    l"
+    "one": "d e t a l i z a t i o n"
   },
   "yAxisNegativeLabel": {
     "one": "b\ne\nh\na\nv\ni\no\nr"
   },
   "yAxisPositiveLabel": {
-    "one": "s\n\nt\n\na\n\nt\n\ne"
+    "one": "s\nt\na\nt\ne"
+    ' "one": "s\n\nt\n\na\n\nt\n\ne"
     ' "one": "s\nt\nr\nu\nc\nt\nu\nr\ne"
+  },
+  "abstract": {
+    "one": "abstract"
+  },
+  "concrete": {
+    "one": "concrete"
+  },
+  "declaration": {
+    "one": "declaration"
+  },
+  "translation": {
+    "one": "translation"
+  },
+  "realization": {
+    "one": "realization"
+  },
+  "specification": {
+    "one": "specification"
+  },
+  "detalization": {
+    "one": "detalization"
+  },
+  "definition": {
+    "one": "definition"
+  },
+  "structure": {
+    "one": "structure"
+  },
+  "entailment": {
+    "one": "entailment"
+  },
+  "consequence": {
+    "one": "consequence"
+  },
+  "algorithm": {
+    "one": "algorithm"
   },
   "plot": {
     "one": "plot",

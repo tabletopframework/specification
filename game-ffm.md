@@ -8,12 +8,15 @@
 </p>
 
 Конкретное может представлять что-то абстрактное. Абстрактное может быть представлено чем-то конкретным. Например, число 5 может быть представлено пятью конкретными яблоками. Мы можем передать яблоки соседу, но проделать что-то подобное с числом 5 у нас не получится. С другой стороны, мы можем перевести число 5 в другую систему счисления, но проделать что-то подобное с яблоками нам не удастся.
+
+Абстрактное связано с конкретным через _отношение реализации_. 
 <p align="center">
-    <img src="./fig/game-ffm/axis-x-with-clarifications-ru.svg">
+    <img src="./fig/game-ffm/axis-x-relation.svg">
 </p>
-Состояние может меняться при исполнении некоторого поведения. Поведение может меняться при достижении некоторого состояния. Например, в магазине мы исполняем поведение покупателя, меняя состояние корзины с продуктами. При заполнении корзины необходимыми продуктами наше поведение меняется и мы отправляемся на кассу для оплаты.
+
+Состояние связано с поведением через _отношение следствия_. В определенном состоянии выполняется определенное поведение. Выполнение поведения приводит к изменению состояния. Например, в магазине мы выполняем поведение _сбора продуктов_, меняя состояние корзины, при заполнении которой, мы переключаемся на поведение _оплаты товаров_.
 <p align="center">
-    <img src="./fig/game-ffm/axis-y-with-clarifications-ru.svg">
+    <img src="./fig/game-ffm/axis-y-relation.svg">
 </p>
 
 ## Интерпретации
@@ -122,11 +125,17 @@
 - Swink `Game Feel: A Game Designer's Guide to Virtual Sensation`
     - Chapter 5, section `Metaphor`.
 
+#### Сеттинг
+
+- Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
+    - Глава 19. Шелл использует термин _трансмедийный мир_.
+- Grouling `The Creation of Narrative in Tabletop Role-Playing Games`
+    - Chapter 4, section `Campaign Settings in D&D`.
+
 #### Арка
 
 - Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
-    - Глава 20, раздел `Создание привлекательных игровых персонажей`
-        - Совет 8. Шелл использует термин _трансформация_.
+    - Глава 20, раздел `Создание привлекательных игровых персонажей`, совет 8. Шелл использует термин _трансформация_.
 - Fullerton `Game Design Workshop`
     - Chapter 4, section `The Dramatic Arc`.
     - Chapter 11, section `Progress`.
@@ -134,13 +143,6 @@
     - Chapter 4, section `Narrative and Interactive Engagement`. Sellers ссылается на [работу](https://lostgarden.com/2012/04/30/loops-and-arcs) Даниэля Кука.
 - Sylvester `Designing Games: A Guide to Engineering Experiences`
     - Chapter 1, section `Emotion Through Character Arcs`.
-
-#### Сеттинг
-
-- Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
-    - Глава 19. Шелл использует термин _трансмедийный мир_.
-- Grouling `The Creation of Narrative in Tabletop Role-Playing Games`
-    - Chapter 4, section `Campaign Settings in D&D`.
 
 #### Механика
 
@@ -164,41 +166,40 @@
 - Sellers `Advanced Game Design: A Systems Approach`
     - Chapter 7, section `Engines`.
 
-#### Геймлэнг
+#### Абстрактное
 
 - Wehrle [Game Design Workshops](https://www.youtube.com/playlist?list=PLNOeNKnzorF5BsM8Rwm3WouPvChzBh2-h)
-    - Видео `Game Design as Process`, минута 20. Wehrle использует термин _грамматика_.
+    - Видео `Game Design as Process`, начиная с минуты 21. Wehrle использует термин _грамматика_.
 - Grouling `The Creation of Narrative in Tabletop Role-Playing Games`
     - Chapter 5, section `The Creation of Possible Worlds in Fiction`. Grouling использует термин _possible world_.
 - Sellers `Advanced Game Design: A Systems Approach`
     - Chapter 3, section `The Player’s Mental Model`.
     - Chapter 12, section `Goals for Your Playtests`.
 
-#### Геймплей
+#### Конкретное
 
 - Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
     - Глава 15.
 
-#### Геймфил
+#### Поведение
+
+- Sellers `Advanced Game Design: A Systems Approach`
+    - Chapter 7.
+
+#### Состояние
 
 - Swink `Game Feel: A Game Designer's Guide to Virtual Sensation`.
 - Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
     - Глава 22. Шелл использует термин _эстетика_.
 
-#### Геймлуп
-
-- Sellers `Advanced Game Design: A Systems Approach`
-    - Chapter 7.
-
 ### Дуальности
 
-Ссылки на противопоставление, связывание или просто использование в качестве синонимов.
+Ссылки на противопоставления, сопоставления или употребления в качестве синонимов.
 
 #### Персонаж и аватар
 
 - Шелл `Геймдизайн. Как создать игру, в которую будут играть все`
-    - Глава 17, раздел `Проблемы`
-        - Проблема 4. Шелл противопоставляет персонажей фильмов и персонажей игр.
+    - Глава 17, раздел `Проблемы`, проблема 4. Шелл противопоставляет персонажей фильмов и персонажей игр.
 - Fullerton `Game Design Workshop`
     - Chapter 4, figure `Characters versus avatars`. Fullerton противопоставляет персонажей, предопределенных автором, и персонажей, конструируемых игроком.
 - Sylvester `Designing Games: A Guide to Engineering Experiences`
@@ -218,16 +219,17 @@
 #### Нарратив и история
 
 - Grouling `The Creation of Narrative in Tabletop Role-Playing Games`
+    - Chapter 1, section `Cybertext: A Model for Adventure Games`. Grouling, ссылаясь на Aarseth, противопоставляет _progression plane_ и _event plane_.
     - Chapter 3, section `Stories Across Media`.
     - Chapter 4, section `Games Versus Narratives`.
     - Chapter 5, section `The Creation of Possible Worlds in Fiction`. Grouling указывает на то, что _textual actual world_ (TAW) является частичным представлением _text reference world_ (TRW).
 - Sellers `Advanced Game Design: A Systems Approach`
-    - Chapter 3, section `Narrative`. Sellers использует термины _narrative_ и _story_ как синонимы.
+    - Chapter 3, section `Narrative`. Sellers употребляет _narrative_ и _story_ в качестве синонимов.
 
 #### Эффект и событие
 
 - TBD
 
 [^1]: Подразумевается тема и сеттинг в литературном смысле, т.к. в сообществе настольщиков часто сеттинг называют темой. Но существуют и обратные примеры (например, [раз](https://louardongames.blogspot.com/2014/08/theme-setting.html), [два](https://bumblingthroughdungeons.com/theme-setting-and-mechanics-in-games) и [три](https://www.youtube.com/watch?v=tAHnu4PIyG0)).
-[^2]: Термины механики и арки взяты из [статьи](https://lostgarden.com/2012/04/30/loops-and-arcs) и [доклада](https://www.youtube.com/watch?v=qwPe3OHR04c) Даниэля Кука. Или на русском из [доклада](https://www.youtube.com/watch?v=RDZdxjzFKzI&t=968s) Андрея Столярова. В оригинале Кук использует термин loop, но в качестве примеров приводит различные механики. Столяров подтверждает, что "петли это просто понятие, которое используется для описания игровых механик".
+[^2]: Термины арки и механики взяты из [статьи](https://lostgarden.com/2012/04/30/loops-and-arcs) и [доклада](https://www.youtube.com/watch?v=qwPe3OHR04c) Даниэля Кука. Или на русском из [доклада](https://www.youtube.com/watch?v=RDZdxjzFKzI&t=968s) Андрея Столярова. В оригинале Кук использует термин _loop_, но в качестве примеров приводит различные механики. Столяров подтверждает, что "петли это просто понятие, которое используется для описания игровых механик".
 [^3]: Почему эффект? Во-первых, эффект приводит к необратимым изменениям. Во-вторых, один и тот же контент, невзирая на количество повторов, может произвести не более одного эффекта (at most once).
