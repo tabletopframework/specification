@@ -14,16 +14,20 @@
 !include <tupadr3/font-awesome-5/book>
 !include <tupadr3/font-awesome-5/book_open>
 !include <tupadr3/font-awesome-5/book_reader>
+!include <tupadr3/font-awesome-5/layer_group>
+!include <tupadr3/font-awesome-5/microchip>
 !include <tupadr3/font-awesome/gamepad>
 !include <tupadr3/font-awesome-5/heartbeat>
 !include <tupadr3/font-awesome/history>
 !include <tupadr3/font-awesome-5/mask>
+!include <tupadr3/font-awesome-5/robot>
 !include <tupadr3/font-awesome-5/pencil_ruler>
 !include <tupadr3/font-awesome-5/file_alt>
 !include <tupadr3/font-awesome-5/file_code>
 !include <tupadr3/font-awesome-5/file_contract>
 !include <tupadr3/font-awesome-5/file_image>
 !include <tupadr3/material/extension>
+!include <tupadr3/material/description>
 !include <tupadr3/material/local_library>
 !include <tupadr3/material/toys>
 !include <tupadr3/material/description>
@@ -106,26 +110,27 @@ left to right direction
 !endprocedure
 
 !procedure $empty_character_agent()
-  label characterAgent [
+  label leftcomp [
   ]
 !endprocedure
 
 !procedure $iconify_character_agent()
-  label characterAgent [
+  label leftcomp [
     ' <$user_edit{scale=0.9}>
     <$user_alt>
   ]
 !endprocedure
 
-!procedure $fill_character_agent($time="dev")
-  label characterAgent <<agent>> [
-    <$user_alt{scale=0.9}>
+!procedure $fill_leftcomp($time="dev")
+  label leftcomp <<agent>> [
+    ' <$user_alt{scale=0.9}>
+    <$robot{scale=1.0}>
+    ' <$user_cog{scale=0.9}>
+    ' <$user_edit{scale=0.9}>
   !if ($time=="dev")
     $translate(characterWriter)
-    ' ($translate(devtime))
   !elseif ($time=="run")
-    $translate(characterController)
-    ' ($translate(runtime))
+    $translate(predictorComp)
   !else
     !assert %false() : "Unknown time"
   !endif
@@ -133,26 +138,27 @@ left to right direction
 !endprocedure
 
 !procedure $empty_avatar_agent()
-  label avatarAgent [
+  label rightcomp [
   ]
 !endprocedure
 
 !procedure $iconify_avatar_agent()
-  label avatarAgent [
+  label rightcomp [
     ' <$user_cog{scale=0.9}>
     <$user_alt>
   ]
 !endprocedure
 
-!procedure $fill_avatar_agent($time="dev")
-  label avatarAgent <<agent>> [
-    <$user_alt{scale=0.9}>
+!procedure $fill_rightcomp($time="dev")
+  label rightcomp <<agent>> [
+    ' <$user_alt{scale=0.9}>
+    <$robot{scale=1.0}>
+    ' <$user_cog{scale=0.9}>
+    ' <$user_edit{scale=0.9}>
   !if ($time=="dev")
     $translate(avatarDesigner)
-    ' ($translate(devtime))
   !elseif ($time=="run")
-    $translate(avatarController)
-    ' ($translate(runtime))
+    $translate(narratorComp)
   !else
     !assert %false() : "Unknown time"
   !endif
@@ -160,117 +166,119 @@ left to right direction
 !endprocedure
 
 !procedure $empty_character()
-  label character [
+  label leftmid [
   ]
 !endprocedure
 
-!procedure $fill_characters($count=1)
+!procedure $fill_leftmid($count=1)
   !if ($count==1)
-    rectangle character [
-      <$pen_square{scale=0.52}><size:7> </size>$translate(character, $count)
-      ' <$book_reader{scale=0.52}><size:7> </size>$translate(character, $count)
+    rectangle leftmid [
+      ' <$extension{scale=0.52}><size:7> </size>$translate(leftmid, $count)
+      <$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)
     ]
   !else
-    collections character [
-      <$pen_square{scale=0.52}><size:7> </size>$translate(character, $count)
-      ' <$book_reader{scale=0.52}><size:7> </size>$translate(character, $count)
+    collections leftmid [
+      ' <$extension{scale=0.52}><size:7> </size>$translate(leftmid, $count)
+      <$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)
     ]
   !endif
 !endprocedure
 
 !procedure $textify_characters($count=1)
   !if ($count==1)
-    card character #back:transparent;line.dotted [
+    card leftmid #back:transparent;line.dotted [
       $translate(character2, $count)
     ]
   !else
-    collections character #back:transparent;line.dotted [
+    collections leftmid #back:transparent;line.dotted [
       $translate(character2, $count)
     ]
   !endif
 !endprocedure
 
 !procedure $empty_avatar()
-  label avatar [
+  label rightmid [
   ]
 !endprocedure
 
-!procedure $fill_avatars($count=1)
+!procedure $fill_rightmid($count=1)
   !if ($count==1)
-    rectangle avatar [
-      <U+0000><$cog{scale=0.52}><size:7> </size>$translate(avatar, $count)<U+0000>
-      ' <U+0000><$gamepad{scale=0.58}><size:7> </size>$translate(avatar, $count)<U+0000>
+    rectangle rightmid [
+      ' <U+0000><$book_open{scale=0.50}><size:7> </size>$translate(rightmid, $count)<U+0000>
+      <U+0000><$layer_group{scale=0.50}><size:7> </size>$translate(rightmid, $count)<U+0000>
     ]
   !else
-    collections avatar [
-      <U+0000><$cog{scale=0.52}><size:7> </size>$translate(avatar, $count)<U+0000>
-      ' <U+0000><$gamepad{scale=0.58}><size:7> </size>$translate(avatar, $count)<U+0000>
+    collections rightmid [
+      ' <U+0000><$book_open{scale=0.50}><size:7> </size>$translate(rightmid, $count)<U+0000>
+      <U+0000><$layer_group{scale=0.50}><size:7> </size>$translate(rightmid, $count)<U+0000>
     ]
   !endif
 !endprocedure
 
 !procedure $textify_avatars($count=1)
   !if ($count==1)
-    card "  $translate(avatar2, $count)  " as avatar #back:transparent;line.dotted
+    card "  $translate(avatar2, $count)  " as rightmid #back:transparent;line.dotted
   !else
-    collections " $translate(avatar2, $count) " as avatar #back:transparent;line.dotted
+    collections " $translate(avatar2, $count) " as rightmid #back:transparent;line.dotted
   !endif
 !endprocedure
 
-!procedure $fill_story_agent($time="run")
-  label storyAgent <<agent>> [
-    <$user_alt{scale=0.9}>
+!procedure $fill_topcomp($time="run")
+  label topcomp <<agent>> [
+    ' <$user_alt{scale=0.9}>
+    <$robot{scale=1.0}>
+    ' <$user_cog{scale=0.9}>
+    ' <$user_edit{scale=0.9}>
   !if ($time=="dev")
     $translate(storyWriter)
-    ' ($translate(devtime))
   !elseif ($time=="run")
-    $translate(storyTeller)
-    ' ($translate(runtime))
+    $translate(mentorComp)
   !else
     !assert %false() : "Unknown time"
   !endif
   ]
 !endprocedure
 
-!procedure $fill_narrative_agent($time="run")
-  label narrativeAgent <<agent>> [
-    <$user_alt{scale=0.9}>
+!procedure $fill_botcomp($time="run")
+  label botcomp <<agent>> [
+    ' <$user_alt{scale=0.9}>
+    <$robot{scale=1.0}>
+    ' <$user_cog{scale=0.9}>
+    ' <$user_edit{scale=0.9}>
   !if ($time=="dev")
     $translate(narrativeDesigner)
-    ' ($translate(devtime))
   !elseif ($time=="run")
-    $translate(narrativePerformer)
-    ' ($translate(runtime))
+    $translate(engineComp)
   !else
     !assert %false() : "Unknown time"
   !endif
   ]
 !endprocedure
 
-!procedure $fill_stories($count=1)
+!procedure $fill_botmid($count=1)
   !if ($count==1)
-    rectangle story [
-      ' <U+0000><$history{scale=0.52}><size:7> </size>$translate(story, $count)<U+0000>
-      <U+0000><$book_open{scale=0.50}><size:7> </size>$translate(story, $count)<U+0000>
-      ' <U+0000><$film{scale=0.52}><size:7> </size>$translate(story, $count)<U+0000>
+    rectangle botmid [
+      ' <$pen_square{scale=0.52}><size:7> </size>$translate(botmid, $count)
+      <$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)
     ]
   !else
-    collections story [
-      ' <U+0000><$history{scale=0.52}><size:7> </size>$translate(story, $count)<U+0000>
-      <U+0000><$book_open{scale=0.50}><size:7> </size>$translate(story, $count)<U+0000>
-      ' <U+0000><$film{scale=0.52}><size:7> </size>$translate(story, $count)<U+0000>
+    collections botmid [
+      ' <$pen_square{scale=0.52}><size:7> </size>$translate(botmid, $count)
+      <$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)
     ]
   !endif
 !endprocedure
 
-!procedure $fill_narratives($count=1)
+!procedure $fill_topmid($count=1)
   !if ($count==1)
-    rectangle narrative [
-      <$extension{scale=0.52}><size:7> </size>$translate(narrative, $count)
+    rectangle topmid [
+      ' <U+0000><$cog{scale=0.52}><size:7> </size>$translate(topmid, $count)<U+0000>
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(topmid, $count)<U+0000>
     ]
   !else
-    collections narrative [
-      <$extension{scale=0.52}><size:7> </size>$translate(narrative, $count)
+    collections topmid [
+      ' <U+0000><$cog{scale=0.52}><size:7> </size>$translate(topmid, $count)<U+0000>
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(topmid, $count)<U+0000>
     ]
   !endif
 !endprocedure
@@ -287,19 +295,19 @@ left to right direction
 !endprocedure
 
 !procedure $fill_axis_x($style=axis)
-  label character <<$style>> [
+  label leftmid <<$style>> [
     $translate(xAxisNegativeLabel)
   ]
-  label avatar <<$style>> [
+  label rightmid <<$style>> [
     $translate(xAxisPositiveLabel)
   ]
 !endprocedure
 
 !procedure $fill_axis_y($style=axis)
-  label narrative <<$style>> [
+  label topmid <<$style>> [
     $translate(yAxisPositiveLabel)
   ]
-  label story <<$style>> [
+  label botmid <<$style>> [
     $translate(yAxisNegativeLabel)
   ]
 !endprocedure
@@ -317,9 +325,9 @@ left to right direction
 !endprocedure
 
 !procedure $empty_axis_y()
-  label highest <<axis>> [
+  label topmost <<axis>> [
   ]
-  label lowest <<axis>> [
+  label botmost <<axis>> [
   ]
 !endprocedure
 
@@ -328,9 +336,9 @@ left to right direction
   $empty_axis_y()
   $empty_character()
   $empty_avatar()
-  label story [
+  label botmid [
   ]
-  label narrative [
+  label topmid [
   ]
 !endprocedure
 
@@ -340,8 +348,8 @@ left to right direction
 !endprocedure
 
 !procedure $join_axis_y($mode="thickness=1")
-  highest ~[$mode]r~ player
-  player ~[$mode]r~ lowest
+  topmost ~[$mode]r~ player
+  player ~[$mode]r~ botmost
 !endprocedure
 
 !procedure $join_axes_1x1($x="thickness=1", $y="thickness=1")
@@ -350,15 +358,15 @@ left to right direction
 !endprocedure
 
 !procedure $join_axes_3x1($mode="thickness=1")
-  leftmost ~[$mode]d~ character
+  leftmost ~[$mode]d~ leftmid
   $join_grid_3x1($mode)
-  avatar ~[$mode]d~ rightmost
+  rightmid ~[$mode]d~ rightmost
 !endprocedure
 
 !procedure $join_axes_1x3($mode="thickness=1")
-  highest ~[$mode]r~ narrative
+  topmost ~[$mode]r~ topmid
   $join_grid_1x3($mode)
-  story ~[$mode]r~ lowest
+  botmid ~[$mode]r~ botmost
 !endprocedure
 
 !procedure $join_axes_3x3($x="thickness=1", $y="thickness=1")
@@ -367,15 +375,15 @@ left to right direction
 !endprocedure
 
 !procedure $join_axes_5x1($x="thickness=1", $y="thickness=1")
-  ' leftmost ~[$x]d~ characterAgent
+  ' leftmost ~[$x]d~ leftcomp
   $join_grid_5x1($x)
-  ' avatarAgent ~[$x]d~ rightmost
+  ' rightcomp ~[$x]d~ rightmost
 !endprocedure
 
 !procedure $join_axes_1x5($x="thickness=1", $y="thickness=1")
-  ' highest ~[$x]r~ storyAgent
+  ' topmost ~[$x]r~ topcomp
   $join_grid_1x5($x)
-  ' narrativeAgent ~[$x]r~ lowest
+  ' botcomp ~[$x]r~ botmost
 !endprocedure
 
 !procedure $join_axes_5x3($x="thickness=1", $y="thickness=1")
@@ -389,19 +397,19 @@ left to right direction
 !endprocedure
 
 !procedure $fill_arcs($count=1)
-  label "  $translate(arc, $count)  " as arcs <<matrix>>
+  label "  $translate(botleft, $count)  " as botleft <<matrix>>
 !endprocedure
 
 !procedure $fill_themes($count=1)
-  label "  $translate(theme, $count)  " as themes <<matrix>>
+  label "  $translate(topleft, $count)  " as topleft <<matrix>>
 !endprocedure
 
 !procedure $fill_mechanics($count=1)
-  label "$translate(mechanic, $count)" as mechanics <<matrix>>
+  label "$translate(botright, $count)" as botright <<matrix>>
 !endprocedure
 
 !procedure $fill_settings($count=1)
-  label "$translate(setting, $count)" as settings <<matrix>>
+  label "$translate(topright, $count)" as topright <<matrix>>
 !endprocedure
 
 !procedure $fill_matrix($count=2)
@@ -412,24 +420,24 @@ left to right direction
 !endprocedure
 
 !procedure $join_matrix_3x1()
-  arcs -[hidden]r- character
-  character -[hidden]r- themes
-  mechanics -[hidden]r- avatar
-  avatar -[hidden]r- settings
+  botleft -[hidden]r- leftmid
+  leftmid -[hidden]r- topleft
+  botright -[hidden]r- rightmid
+  rightmid -[hidden]r- topright
 !endprocedure
 
 !procedure $join_matrix_3x3()
-  arcs -[hidden]d- story
-  story -[hidden]d- mechanics
-  themes -[hidden]d- narrative
-  narrative -[hidden]d- settings
+  botleft -[hidden]d- botmid
+  botmid -[hidden]d- botright
+  topleft -[hidden]d- topmid
+  topmid -[hidden]d- topright
 !endprocedure
 
 !procedure $empty_grid_1x3()
-  label story [
+  label botmid [
   ]
   $fill_players()
-  label narrative [
+  label topmid [
   ]
 !endprocedure
 
@@ -443,20 +451,20 @@ left to right direction
   $empty_character()
   $empty_avatar()
 
-  label story [
+  label botmid [
   ]
-  label narrative [
+  label topmid [
   ]
 !endprocedure
 
 !procedure $fill_grid_3x1($count=1)
-  $fill_characters($count)
-  $fill_avatars($count)
+  $fill_leftmid($count)
+  $fill_rightmid($count)
 !endprocedure
 
 !procedure $fill_grid_1x3($count=1)
-  $fill_stories($count)
-  $fill_narratives($count)
+  $fill_botmid($count)
+  $fill_topmid($count)
 !endprocedure
 
 !procedure $fill_grid_3x3($count=1)
@@ -465,9 +473,9 @@ left to right direction
 !endprocedure
 
 !procedure $fill_grid_5x1($time="dev", $count=1)
-  $fill_character_agent($time)
+  $fill_leftcomp($time)
   $fill_grid_3x1($count)
-  $fill_avatar_agent($time)
+  $fill_rightcomp($time)
 !endprocedure
 
 !procedure $fill_grid_5x3($time="dev", $count=1)
@@ -476,22 +484,22 @@ left to right direction
 !endprocedure
 
 !procedure $fill_grid_5x5($time="dev", $count=1)
-  $fill_character_agent($time)
-  $fill_avatar_agent($time)
+  $fill_leftcomp($time)
+  $fill_rightcomp($time)
   $fill_grid_3x1($count)
   $fill_grid_1x3($count)
-  $fill_story_agent($time)
-  $fill_narrative_agent($time)
+  $fill_topcomp($time)
+  $fill_botcomp($time)
 !endprocedure
 
 !procedure $join_grid_1x3($mode="thickness=1")
-  narrative ~[$mode]r~ player
-  player ~[$mode]r~ story
+  topmid ~[$mode]r~ player
+  player ~[$mode]r~ botmid
 !endprocedure
 
 !procedure $join_grid_3x1($mode="thickness=1")
-  character ~[$mode]d~ player
-  player ~[$mode]d~ avatar
+  leftmid ~[$mode]d~ player
+  player ~[$mode]d~ rightmid
 !endprocedure
 
 !procedure $join_grid_3x3($mode="thickness=1")
@@ -500,20 +508,20 @@ left to right direction
 !endprocedure
 
 !procedure $join_grid_5x1($mode="thickness=1")
-  characterAgent ~[$mode]d~ character
+  leftcomp ~[$mode]d~ leftmid
   $join_grid_3x1($mode)
-  avatar ~[$mode]d~ avatarAgent
+  rightmid ~[$mode]d~ rightcomp
 !endprocedure
 
 !procedure $join_half_5x1($mode="thickness=1")
-  characterAgent ~[$mode]d~ character
-  character ~[$mode]d~ player
+  leftcomp ~[$mode]d~ leftmid
+  leftmid ~[$mode]d~ player
 !endprocedure
 
 !procedure $join_grid_1x5($mode="thickness=1")
-  storyAgent ~[$mode]r~ story
+  topcomp ~[$mode]r~ topmid
   $join_grid_1x3($mode)
-  narrative ~[$mode]r~ narrativeAgent
+  botmid ~[$mode]r~ botcomp
 !endprocedure
 
 !procedure $join_grid_5x3($mode="thickness=1")

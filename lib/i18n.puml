@@ -24,34 +24,26 @@
   "characterWriter": {
     "one": "сценарист"
   },
-  "characterController": {
-    "one": "мастер"
+  "predictorComp": {
+    "one": "оракул"
   },
   "avatarDesigner": {
     "one": "дизайнер"
   },
-  "avatarController": {
-    "one": "движок"
+  "narratorComp": {
+    "one": "нарратор"
   },
   "storyWriter": {
     "one": "сценарист"
   },
-  "storyTeller": {
-    "one": "движок"
+  "mentorComp": {
+    "one": "наставник"
   },
   "narrativeDesigner": {
     "one": "дизайнер"
   },
-  "narrativePerformer": {
-    "one": "мастер"
-  },
-  "character": {
-    "one": "персонаж",
-    "many": "персонажы"
-  },
-  "avatar": {
-    "one": "аватар",
-    "many": "аватары"
+  "engineComp": {
+    "one": "движок"
   },
   "xAxisNegativeTerm": {
     ' "one": "абстрактное"
@@ -77,22 +69,30 @@
   },
   "xAxisNegativeLabel": {
     ' "one": "а б с т р а к ц и я"
-    "one": "а б с т р а к т н о е"
+    ' "one": "п о л а г а е м о е"
+    "one": "г и п о т е т и ч е с к о е"
+    ' "one": "а б с т р а к т н о е"
     ' "one": "а б с т р а к т н о с т ь"
     ' "one": "с п е ц и ф и к а ц и я"
   },
   "xAxisPositiveLabel": {
     ' "one": "к о н к р е ц и я"
-    "one": "к о н к р е т н о е"
+    ' "one": "к о н к р е т н о е"
+    ' "one": "т р а к т у е м о е"
+    "one": "ф а к т и ч е с к о е"
     ' "one": "к о н к р е т н о с т ь"
     ' "one": "р е а л и з а ц и я"
     ' "one": "и м п л е м е н т а ц и я"
   },
   "yAxisNegativeLabel": {
-    "one": "п\nо\nв\nе\nд\nе\nн\nи\nе"
+    ' "one": "п\nо\nв\nе\nд\nе\nн\nи\nе"
+    "one": "к\nо\nн\nк\nр\nе\nт\nн\nо\nе"
+    ' "one": "к\nо\nн\nк\nр\nе\nт\nн\nо\nе"
   },
   "yAxisPositiveLabel": {
-    "one": "с\nо\nс\nт\nо\nя\nн\nи\nе"
+    ' "one": "с\nо\nс\nт\nо\nя\nн\nи\nе"
+    "one": "а\nб\nс\nт\nр\nа\nк\nт\nн\nо\nе"
+    ' "one": "а\nб\nс\nт\nр\nа\nк\nт\nн\nо\nе"
   },
   "declaration": {
     "one": "объявление"
@@ -128,29 +128,37 @@
     "one": "сюжет",
     "many": "сюжеты"
   },
-  "story": {
-    "one": "история",
-    "many": "истории"
+  "topmid": {
+    "one": "персонаж",
+    "many": "персонажи"
   },
-  "narrative": {
+  "botmid": {
+    "one": "аватар",
+    "many": "аватары"
+  },
+  "leftmid": {
+    "one": "предвидение",
+    "many": "предвидения"
+  },
+  "rightmid": {
     "one": "нарратив",
     "many": "нарративы"
   },
-  "arc": {
+  "topleft": {
     "one": "арка",
     "many": "арки"
   },
-  "theme": {
-    "one": "тема",
-    "many": "темы"
-  },
-  "mechanic": {
+  "botleft": {
     "one": "механика",
     "many": "механики"
   },
-  "setting": {
+  "topright": {
+    "one": "тема",
+    "many": "тема"
+  },
+  "botright": {
     "one": "сеттинг",
-    "many": "сеттинги"
+    "many": "сеттинг"
   },
   "idea": {
     ' "one": "идея"
@@ -299,11 +307,11 @@
   "interactivity": {
     "one": "интерактивность"
   },
-  "master_character_management": {
-    "many": "управление персонажами мастера"
+  "mentor_character_management": {
+    "many": "управление персонажами наставника"
   },
-  "master_character_prediction": {
-    "many": "предсказание персонажей мастера"
+  "mentor_character_prediction": {
+    "many": "предсказание персонажей наставника"
   },
   "player_character_control": {
     "many": "контроль персонажей игрока"
@@ -351,49 +359,41 @@
     "one": "writer"
     ' "one": "game\nwriter"
   },
-  "characterController": {
+  "predictorComp": {
     ' "one": "controller"
-    "one": "master"
-    ' "one": "game\nmaster"
+    "one": "oracle"
+    ' "one": "game\nmentor"
   },
   "avatarDesigner": {
     "one": "designer"
     ' "one": "game\ndesigner"
   },
-  "avatarController": {
+  "narratorComp": {
     ' "one": "controller"
-    "one": "engine"
+    "one": "narrator"
     ' "one": "game\nengine"
   },
   "storyWriter": {
     "one": "writer"
     ' "one": "game\nwriter"
   },
-  "storyTeller": {
+  "mentorComp": {
     ' "one": "teller"
-    "one": "engine"
+    "one": "mentor"
     ' "one": "game\nengine"
   },
   "narrativeDesigner": {
     "one": "designer"
     ' "one": "game\ndesigner"
   },
-  "narrativePerformer": {
+  "engineComp": {
     ' "one": "performer"
-    "one": "master"
-    ' "one": "game\nmaster"
-  },
-  "character": {
-    "one": "character",
-    "many": "characters"
+    "one": "engine"
+    ' "one": "game\nmentor"
   },
   "character2": {
     "one": "c h a r a c t e r",
     "many": "c h a r a c t e r s"
-  },
-  "avatar": {
-    "one": "avatar",
-    "many": "avatars"
   },
   "avatar2": {
     "one": "a v a t a r",
@@ -406,45 +406,53 @@
     "one": "runtime"
   },
   "xAxisNegativeTerm": {
-    ' "one": "abstract"
-    "one": "declaration"
+    "one": "abstract"
+    ' "one": "declaration"
   },
   "xAxisPositiveTerm": {
-    ' "one": "concrete"
-    "one": "detalization"
+    "one": "concrete"
+    ' "one": "detalization"
   },
   "yAxisNegativeTerm": {
-    "one": "behavior"
+    "one": "hypothetical"
   },
   "yAxisPositiveTerm": {
-    "one": "state"
+    "one": "factual"
   },
   "xAxisNegativeLabel": {
     ' "one": "l o g i c a l"
     ' "one": "m e n t a l"
     ' "one": "a b s t r a c t"
+    ' "one": "p r o j e c t i v e"
+    "one": "h y p o t h e t i c a l"
     ' "one": "a b s t r a c t i o n"
     ' "one": "a b s t r a c t n e s s"
-    "one": "d e c l a r a t i o n"
+    ' "one": "d e c l a r a t i o n"
   },
   "xAxisPositiveLabel": {
     ' "one": "p h y s i c a l"
     ' "one": "m a t e r i a l"
     ' "one": "c o n c r e t e"
+    ' "one": "i n t e r p r e t i v e"
+    "one": "f a c t u a l"
     ' "one": "c o n c r e t i o n"
     ' "one": "c o n c r e t e n e s s"
     ' "one": "s p e c i f i c a t i o n"
     ' "one": "i m p l e m e n t a t i o n"
     ' "one": "r    e    a    l"
-    "one": "d e t a l i z a t i o n"
+    ' "one": "d e t a l i z a t i o n"
   },
   "yAxisNegativeLabel": {
-    "one": "b\ne\nh\na\nv\ni\no\nr"
+    "one": "c\no\nn\nc\nr\ne\nt\ne"
+    ' "one": "b\ne\nh\na\nv\ni\no\nr"
+    ' "one": "i\nn\nt\ne\nr\np\nr\ne\nt\ni\nv\ne"
   },
   "yAxisPositiveLabel": {
-    "one": "s\nt\na\nt\ne"
+    "one": "a\nb\ns\nt\nr\na\nc\nt"
+    ' "one": "s\nt\na\nt\ne"
     ' "one": "s\n\nt\n\na\n\nt\n\ne"
     ' "one": "s\nt\nr\nu\nc\nt\nu\nr\ne"
+    ' "one": "p\nr\no\nj\ne\nc\nt\ni\nv\ne"
   },
   "abstract": {
     "one": "abstract"
@@ -486,29 +494,37 @@
     "one": "plot",
     "many": "plots"
   },
-  "story": {
-    "one": "story",
-    "many": "stories"
+  "topmid": {
+    "one": "character",
+    "many": "characters"
   },
-  "narrative": {
+  "botmid": {
+    "one": "avatar",
+    "many": "avatars"
+  },
+  "leftmid": {
+    "one": "foresight",
+    "many": "predictions"
+  },
+  "rightmid": {
     "one": "narrative",
     "many": "narratives"
   },
-  "arc": {
+  "topleft": {
     "one": "arc",
     "many": "arcs"
   },
-  "theme": {
-    "one": "theme",
-    "many": "themes"
-  },
-  "mechanic": {
+  "botleft": {
     "one": "mechanic",
     "many": "mechanics"
   },
-  "setting": {
+  "topright": {
+    "one": "theme",
+    "many": "theme"
+  },
+  "botright": {
     "one": "setting",
-    "many": "settings"
+    "many": "setting"
   },
   "idea": {
     ' "one": "idea"
@@ -635,11 +651,11 @@
   "interactivity": {
     "one": "interactivity"
   },
-  "master_character_management": {
-    "many": "master characters management"
+  "mentor_character_management": {
+    "many": "mentor characters management"
   },
-  "master_character_prediction": {
-    "many": "master characters prediction"
+  "mentor_character_prediction": {
+    "many": "mentor characters prediction"
   },
   "player_character_management": {
     "many": "player characters management"
