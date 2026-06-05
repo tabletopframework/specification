@@ -1,3 +1,13 @@
+@startuml filled-player
+!include lib/game.puml!core
+!include lib/i18n.puml!ru
+skinparam ranksep 150
+skinparam nodesep 50
+
+$empty_grid_3x1()
+$join_grid_3x1("hidden")
+@enduml
+
 @startuml player-with-axes
 !include lib/game.puml!core
 !include lib/i18n.puml!ru
