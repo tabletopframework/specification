@@ -37,7 +37,13 @@
     "one": "сценарист"
   },
   "mentorComp": {
-    "one": "наставник"
+    "one": "ментор"
+  },
+  "protocol": {
+    "one": "протокол"
+  },
+  "environ": {
+    "one": "среда"
   },
   "narrativeDesigner": {
     "one": "дизайнер"
@@ -88,15 +94,13 @@
   },
   "yAxisNegativeLabel": {
     ' "one": "п\nо\nв\nе\nд\nе\nн\nи\nе"
-    ' "one": "к\nо\nн\nк\nр\nе\nт\nн\nо\nе"
-    ' "one": "к\nо\nн\nк\nр\nе\nт\nн\nо\nе"
-    "one": "в\nо\nп\nл\nо\nщ\nе\nн\nи\nе"
+    "one": "к\nо\nн\nк\nр\nе\nт\nн\nо\nе"
+    ' "one": "в\nо\nп\nл\nо\nщ\nе\nн\nи\nе"
   },
   "yAxisPositiveLabel": {
-    "one": "и\nд\nе\nя"
+    ' "one": "и\nд\nе\nя"
     ' "one": "с\nо\nс\nт\nо\nя\nн\nи\nе"
-    ' "one": "а\nб\nс\nт\nр\nа\nк\nт\nн\nо\nе"
-    ' "one": "а\nб\nс\nт\nр\nа\nк\nт\nн\nо\nе"
+    "one": "а\nб\nс\nт\nр\nа\nк\nт\nн\nо\nе"
   },
   "declaration": {
     "one": "объявление"

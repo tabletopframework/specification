@@ -46,32 +46,24 @@ $fill_axes()
 $empty_axes()
 $join_axes_3x3(hidden, hidden)
 
-$fill_matrix(1)
+$fill_matrix(2)
 $join_matrix_3x3()
 @enduml
 
-@startuml matrix-with-protocols-singular
+@startuml player-protocol-environ
 !include lib/game.puml!core
 !include lib/i18n.puml!ru
-skinparam ranksep 20
-skinparam nodesep 40
+skinparam ranksep 60
+skinparam nodesep 20
+skinparam NoteTextAlignment left
+scale max 1200 width
 
-<style>
-  .matrix {
-    FontSize: 30;
-    FontColor: Grey;
-  }
-</style>
+$fill_players()
+$fill_protocol()
+$fill_environ()
 
-$iconify_players()
-
-$fill_grid_3x3(1)
-
-$empty_axes()
-$join_axes_3x3()
-
-$fill_matrix(1)
-$join_matrix_3x3()
+player ~d~ protocol
+protocol ~d~ environ
 @enduml
 
 @startuml matrix-with-protocols-plural

@@ -165,6 +165,25 @@ left to right direction
   ]
 !endprocedure
 
+!procedure $fill_protocol($count=1)
+  !if ($count==1)
+    rectangle protocol [
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(protocol, $count)<U+0000>
+    ]
+  !else
+    collections protocol [
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(protocol, $count)<U+0000>
+    ]
+  !endif
+!endprocedure
+
+!procedure $fill_environ()
+  label environ <<agent>> [
+    <$robot{scale=1.0}>
+    $translate(environ)
+  ]
+!endprocedure
+
 !procedure $empty_character()
   label leftmid [
   ]
@@ -174,12 +193,12 @@ left to right direction
   !if ($count==1)
     rectangle leftmid [
       ' <$extension{scale=0.52}><size:7> </size>$translate(leftmid, $count)
-      <$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)<U+0000>
     ]
   !else
     collections leftmid [
       ' <$extension{scale=0.52}><size:7> </size>$translate(leftmid, $count)
-      <$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(leftmid, $count)<U+0000>
     ]
   !endif
 !endprocedure
@@ -259,12 +278,12 @@ left to right direction
   !if ($count==1)
     rectangle botmid [
       ' <$pen_square{scale=0.52}><size:7> </size>$translate(botmid, $count)
-      <$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)<U+0000>
     ]
   !else
     collections botmid [
       ' <$pen_square{scale=0.52}><size:7> </size>$translate(botmid, $count)
-      <$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)
+      <U+0000><$layer_group{scale=0.52}><size:7> </size>$translate(botmid, $count)<U+0000>
     ]
   !endif
 !endprocedure
