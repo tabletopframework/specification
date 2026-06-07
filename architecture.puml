@@ -66,7 +66,7 @@ player ~d~ protocol
 protocol ~d~ environ
 @enduml
 
-@startuml matrix-with-protocols-plural
+@startuml aspects-with-protocols
 !include lib/game.puml!core
 !include lib/i18n.puml!ru
 skinparam ranksep 20
@@ -98,7 +98,7 @@ skinparam nodesep 40
 
 $fill_players(1)
 
-$fill_grid_5x5("run", 1)
+$fill_grid_5x5("run", 2)
 
 $empty_axes()
 $join_axes_5x5()

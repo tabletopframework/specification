@@ -104,7 +104,7 @@ $fill_matrix(1)
 $join_matrix_3x3()
 @enduml
 
-@startuml matrix-with-protocols-plural
+@startuml aspects-with-protocols
 !include lib/game.puml!core
 !include lib/i18n.puml!en
 skinparam ranksep 20
