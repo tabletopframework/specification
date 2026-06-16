@@ -66,45 +66,35 @@ player ~d~ protocol
 protocol ~d~ component
 @enduml
 
-@startuml system-position-participant
+@startuml player-protocol-component-with-participants
 !include lib/game.puml!core
 !include lib/i18n.puml!ru
+skinparam ranksep 60
+skinparam nodesep 20
+skinparam NoteTextAlignment left
+scale max 1200 width
 
-$fill_players()
-$fill_environ()
+<style>
+  package {
+    FontSize: 20;
+    FontStyle: plain;
+  }
+</style>
 
-rectangle " " as system {
-  portin "$translate(topmid, 1)" as p1
-  portin "$translate(botmid, 1)" as p2
-  portin "$translate(leftmid, 1)" as p3
-  portin "$translate(rightmid, 1)" as p4
-  portout "$translate(topmid, 1)" as po1
-  portout "$translate(botmid, 1)" as po2
-  portout "$translate(leftmid, 1)" as po3
-  portout "$translate(rightmid, 1)" as po4
-  
-  $fill_leftcomp()
-  $fill_rightcomp()
-  $fill_topcomp()
-  $fill_botcomp()
+package "$translate(participant, 1) 1" as participant1 {
+  $fill_players()
 }
+note left: $translate(client, 1)
 
-player ~~ p1
-player ~~ p2
-player ~~ p3
-player ~~ p4
-p1 ~~ topcomp
-p2 ~~ botcomp
-p3 ~~ leftcomp
-p4 ~~ rightcomp
-topcomp ~~ po1
-botcomp ~~ po2
-leftcomp ~~ po3
-rightcomp ~~ po4
-po1 ~~ environ
-po2 ~~ environ
-po3 ~~ environ
-po4 ~~ environ
+$fill_protocol()
+
+package "$translate(participant, 1) 2" as participant2 {
+  $fill_component()
+}
+note right: $translate(server, 1)
+
+player ~d~ protocol
+protocol ~d~ component
 @enduml
 
 @startuml aspects-with-protocols
