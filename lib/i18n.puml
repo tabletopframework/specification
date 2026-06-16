@@ -43,6 +43,9 @@
     "one": "протокол"
   },
   "environ": {
+    "one": "среда"
+  },
+  "component": {
     "one": "компонент"
   },
   "narrativeDesigner": {

@@ -121,7 +121,7 @@ left to right direction
   ]
 !endprocedure
 
-!procedure $fill_leftcomp($time="dev")
+!procedure $fill_leftcomp($time="run")
   label leftcomp <<agent>> [
     ' <$user_alt{scale=0.9}>
     <$robot{scale=1.0}>
@@ -149,7 +149,7 @@ left to right direction
   ]
 !endprocedure
 
-!procedure $fill_rightcomp($time="dev")
+!procedure $fill_rightcomp($time="run")
   label rightcomp <<agent>> [
     ' <$user_alt{scale=0.9}>
     <$robot{scale=1.0}>
@@ -179,8 +179,15 @@ left to right direction
 
 !procedure $fill_environ()
   label environ <<agent>> [
-    <$robot{scale=1.0}>
+    <$user_cog{scale=1.0}>
     $translate(environ)
+  ]
+!endprocedure
+
+!procedure $fill_component()
+  label component <<agent>> [
+    <$robot{scale=1.0}>
+    $translate(component)
   ]
 !endprocedure
 
