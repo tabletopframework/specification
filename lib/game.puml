@@ -423,11 +423,11 @@ left to right direction
 !endprocedure
 
 !procedure $fill_arcs($count=1)
-  label "  $translate(botleft, $count)  " as botleft <<matrix>>
+  label "$translate(botleft, $count)" as botleft <<matrix>>
 !endprocedure
 
 !procedure $fill_themes($count=1)
-  label "  $translate(topleft, $count)  " as topleft <<matrix>>
+  label "$translate(topleft, $count)" as topleft <<matrix>>
 !endprocedure
 
 !procedure $fill_mechanics($count=1)

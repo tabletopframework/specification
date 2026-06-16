@@ -17,7 +17,7 @@ skinparam nodesep 1
 <style>
   .axis {
     FontColor: black;
-    FontSize: 30;
+    FontSize: 20;
   }
 </style>
 
